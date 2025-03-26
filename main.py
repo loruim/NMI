@@ -106,9 +106,6 @@ def extraction(original_pixels, encrypted_pixels, pixel_data):
                     if len(bin_number) < quantity_of_bits:
                         bin_number = "0" * (quantity_of_bits - len(bin_number)) + bin_number
                     key_string += bin_number
-    
-    #if len(key_string) % 8 != 0:
-    #    key_string = ("0" * (8 - len(key_string) % 8)) + key_string
 
     bit_stream, file, key_length = key()
     count = 0
